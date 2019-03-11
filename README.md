@@ -11,7 +11,7 @@ usage : genremapper.pl < old.xml > new.xml
 -Year
 -Poster
 usage : imdbmapper.pl old.xml > new.xml
-IMDBb Engine is forket from : https://github.com/FabianBeiner/PHP-IMDB-Grabber
+IMDBb Engine is forked from : https://github.com/FabianBeiner/PHP-IMDB-Grabber
 
 • EPGScripts/ratingmapper/ratingmapper.pl converts any xmltv.xml file for viewing country,date,age-rating,star-rating like
   (USA) 2009 • FSK 12 • IMDb ★★★★☆ on top of the description.
