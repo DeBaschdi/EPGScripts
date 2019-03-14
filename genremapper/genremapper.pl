@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w 
 
 ## Horizon.tv.ini genre Mapper ##
-## Revision 1 ##
+## Revision 4 ##
 ## DeBaschdi ##
 ## takealug.de ##
 
@@ -29,7 +29,6 @@ my $TALKSHOW          =    "Talk show";
 
 my $SPORT             =    "Sports";
 my $SPORT_SPECIAL     =    "Special events (Olympic Games, World Cup, etc.)";
-                            
 my $SPORT_MAGAZINE    =    "Sports magazines";
 my $FOOTBALL          =    "Football / Soccer";
 my $TENNIS            =    "Tennis / Squash";
@@ -102,13 +101,15 @@ my %REPLACE=(
  "Movie"  => $MOVIE ,            
  "Spielfilm"  => $MOVIE ,
  "Familienfilm" => $MOVIE ,
- "Spielfilm/Sonstige"  => $NONE ,            
+ "Spielfilm/Sonstige"  => $NONE , 
+ "Spielfilme" => $MOVIE ,
  "Drama (film)"  => $MOVIE ,            
  "Drama (filme)"  => $MOVIE ,
  "Drama"  => $MOVIE ,            
  "Spielfilm/Drama"  => $MOVIE ,            
  "Melodrama"  => $MOVIE, 
  "Melodram"  => $MOVIE,
+ "Sportfilm"  => $MOVIE,
  "Thriller"  => $THRILLER ,         
  "Agentenfilmparodie" => $THRILLER ,
  "Spielfilm/Thriller"  => $THRILLER ,        
@@ -134,40 +135,43 @@ my %REPLACE=(
  "Spielfilm/Horror"  => $SF ,               
  "Spielfilm/Fantasy"  => $SF ,              
  "Fantasyfilm" => $SF ,
- 
+ "Science-Fiction-Action" => $SF ,
  "Komödie"  => $COMEDY ,           
  "Teenagerkomödie" => $COMEDY ,
  "Fantasykomödie" => $COMEDY ,
  "Familienkomödie" => $COMEDY ,
+ "Tragikomödie" => $COMEDY ,
  "Spielfilm/Comedy"  => $COMEDY ,           
  "Serie/Comedy"  => $COMEDY ,           
- "Unterhaltung/Comedy" => $COMEDY ,           
+ "Unterhaltung/Comedy" => $COMEDY , 
+ "Weihnachtskomödie" => $COMEDY ,
+ "Actionkomödie" => $COMEDY ,
  "Drama (serie)"  => $SOAP ,             
- "Serie/Drama"  => $SOAP ,            
+ "Serie/Drama"  => $SOAP , 
+ "Series Drama" => $SOAP ,
  "Serie/Soap"  => $SOAP ,             
  "Theater"  => $SOAP ,            
- 
  "Romance"  => $ROMANCE ,          
  "Serie/Romantik"  => $ROMANCE ,          
  "Spielfilm/Romantik"  => $ROMANCE ,          
- "Romanze"  => $ROMANCE ,
- "Liebesfilm"  => $ROMANCE ,
+ "Liebesfilm" => $ROMANCE ,
+ "Romanze"  => $ROMANCE ,          
  "Heimatfilm"  => $HISTORICAL ,       
  "Historienfilm"  => $HISTORICAL ,       
  "Erotik"  => $XXX ,              
  "Erotik/Spielfilm-Erotik" => $XXX ,             
  "Erotik/Serie-Erotik" => $XXX ,              
 
- 
  "Nachrichten"  => $NEWS ,                        
- "Nachrichten/Info/Sonstige" => $NONE ,
+ "Nachrichten/Info/Sonstige" => $NEWS ,
  "Nachrichten/Info/Politik" => $NEWS ,
  "Nachrichten/Info/Finanzen" => $NEWS ,
  "Wetter"  => $WEATHER ,          
  "Nachrichten/Info/Wetter" => $WEATHER ,          
  "Info"  => $NEWS_MAGAZINE ,    
  "Nachrichten/Info/Magazin"  => $NEWS_MAGAZINE ,   
- "Dokumentation" => $DOCUMENTARY ,      
+ "Dokumentation" => $DOCUMENTARY ,
+ "Literaturverfilmung" => $DOCUMENTARY ,
  "Dokufilm" => $DOCUMENTARY ,      
   "Dokumentarfilm" => $DOCUMENTARY ,      
  "Dokureihe" => $DOCUMENTARY ,      
@@ -180,17 +184,17 @@ my %REPLACE=(
  "Talk"  => $DEBATE ,           
 
 
- "Series"  => $SHOW ,             
+ "Series"  => Series ,             
  "Reality"  => $SHOW ,             
- "Unterhaltung/Reality"  => $SOAP ,             
+ "Unterhaltung/Reality"  => $SOAP ,  
+ "Castingshow"  => $SOAP ,  
  "Unterhaltung/Shows"  => $SHOW,             
  "Unterhaltungsshow"  => $SHOW,
  "Unterhaltung/Game"  => $SHOW ,             
  "Unterhaltung/Sonstige"  => $NONE ,             
  "Serie/Sonstige" => $NONE ,
- 
+ "Sonstiges" => $NONE ,
 
- 
  "Show"  => $GAME ,             
  "Unterhaltung"  => $GAME ,             
 
@@ -198,13 +202,13 @@ my %REPLACE=(
   "Unterhaltung/Talkshow"  => $TALKSHOW ,         
 
  "Sport"  => $SPORT ,            
- "Snooker"  => $TENNIS ,          
- "Langlauf"  => $TENNIS ,          
+ "Snooker"  => Billard ,          
+ "Langlauf"  => $Winter_Sports ,          
  "Autosport"  => $SPORT ,            
  "Sport/Golf"  => $SPORT ,            
  "Radsport"  => $SPORT ,            
  "Sport/Radsport"  => $SPORT ,            
- "Sport/Sonstige"  => $NONE ,            
+ "Sport/Sonstige"  => $SPORT ,            
  "Extremsport" => $SPORT ,            
  "Special Event"  => $SPORT_SPECIAL ,    
   "Sport/Besondere Ereignisse"  => $SPORT_SPECIAL ,    
@@ -213,8 +217,8 @@ my %REPLACE=(
  "Fußball"  => $FOOTBALL ,         
  "Fussball"  => $FOOTBALL ,         
  "Sport/Fußball"  => $FOOTBALL ,         
- "Squash"  => $FOOTBALL ,         
- "Sport/Squash"  => $FOOTBALL ,         
+ "Squash"  => $TENNIS ,         
+ "Sport/Squash"  => $TENNIS ,         
  "Tennis"  => $TENNIS ,           
  "Tischtennis"  => $TENNIS ,           
  "Sport/Tennis"  => $TENNIS ,           
@@ -231,27 +235,37 @@ my %REPLACE=(
  "Sport/Wassersport"  => $SPORT_WATER ,
  "Wintersport"  => $Winter_Sports ,
  "Sport/Wintersport"  => $Winter_Sports ,
+ "Skispringen" => $Winter_Sports ,
+ "Ski alpin" => $Winter_Sports ,
+ "Skiakrobatik"  => $Winter_Sports ,
+ "Nordische Kombination" => $Winter_Sports ,
  "Reitsport"    => $EQU ,  
  "Sport/Reiten"    => $EQU ,
  "Kampfsport" => $MARTIAL ,
  "Judo" => $MARTIAL ,
  "Sport/Kampfsport" => $MARTIAL ,
  "Bogenschießen"  => $SPORT_SPECIAL ,
- 
 
- "Kinder"  => $KIDS ,             
+ "Kinder"  => $KIDS ,
+ "Kids"    => $KIDS ,
  "Jugend"  => $KIDS ,             
  "Kinderfilm" => $KIDS ,
  "Jugendfilm" => $KIDS ,
  "Märchenfilm" => $KIDS ,
  "Kinder/Jugend/Serien" => $KIDS ,             
   "Kinderabenteuer" => $KIDS ,             
- "Kinder/Jugend/Show" => $KIDS ,             
+ "Kinder/Jugend/Show" => $KIDS ,
+ "Kinderkomödie" => $KIDS ,
+ "Kinderkrimi" => $KIDS ,
  "Kinder, 0 6"  => $KIDS_0_5 ,         
+ "Kids, 0 6" => $KIDS_0_5 ,
  "Kinder, 6 14"  => $KIDS_6_14 ,        
- "Kinder, 10 16"  => $KIDS_10_16 ,      
+ "Kinder, 10 16"  => $KIDS_10_16 ,
+ "Kids, 10 16" => $KIDS_10_16 ,
+ "Kids, 6 14"  => $KIDS_6_14 ,
  "Zeichentrick"  => $CARTOON ,         
  "Zeichentrickserie"  => $CARTOON ,
+ "Zeichentrickfilm"  => $CARTOON ,
  "Animationsfilm" => $CARTOON ,
  "Trickfilm" => $CARTOON ,
  "Spielfilm/Zeichentrick" => $CARTOON ,          
@@ -299,7 +313,6 @@ my %REPLACE=(
   "Kino"  => $FILM ,             
  "Politik"  => $SOCIAL ,           
  "Themen/Politik"  => $SOCIAL ,          
- 
  "Magazin"  => $MAGAZINE ,         
   "Wissen"  => $MAGAZINE ,         
  "Reportage"  => $MAGAZINE ,         
@@ -311,7 +324,8 @@ my %REPLACE=(
  "Themen/Wirtschaft"  => $ECONOMIC ,         
  "Berühmte Leute"  => $VIP ,              
 
- "Weiterbildung"  => $SCIENCE ,          
+ "Weiterbildung"  => $SCIENCE ,     
+ "Fortbildung" => $SCIENCE ,
  "Bildung"  => $SCIENCE ,          
  "Themen/Bildung" => $SCIENCE ,          
   "Geschichte"  => $SCIENCE ,          
@@ -326,12 +340,14 @@ my %REPLACE=(
  "Sprachen"  => $LANGUAGES ,       
  "Freizeit"  => $HOBBIES ,          
  "Garten"  => $HOBBIES ,          
- "Unterhaltung/Haus&amp;Garten"  => $HOBBIES ,          
+ "Unterhaltung/Haus&Garten"  => $HOBBIES ,          
  "Special Interest/Sonstige"  => $NONE ,          
  "Reisen"  => $TRAVEL ,           
 "Themen/Reise"  => $TRAVEL ,           
 "Reisedoku"  => $TRAVEL ,           
- "Unterhaltung/Kunst und Handwerk"  => $HANDICRAF ,        
+ "Unterhaltung/Kunst und Handwerk"  => $HANDICRAF ,
+ "Heimwerken" => $HANDICRAF ,
+ 
 
  "Rund Ums Auto"  => $MOTORING ,         
  "Gesundheit"  => $FITNESS ,          
@@ -343,7 +359,6 @@ my %REPLACE=(
  "Liveübertragung"  => $LIVE ,        
 "Undefiniert" => $NONE ,
 
- 
  ) ; 
 
 my $PRE  = '<category lang=\"de\">' ;
@@ -366,7 +381,6 @@ while (<>) {
        {       
         $line =~ tr/\(n)//;
        }    
-    
     if ($line =~ /parentId/)
        {
         @fields = split/,/, $line;
@@ -374,7 +388,6 @@ while (<>) {
            $anhang = $zeile."</sub-title>\n";
            $line = $anhang;
        }
-   
 
         $line =~ s/($PRE)(.*)($POST)/"$1".myfilter("$2")."$3"/ge ;
     print $line;
