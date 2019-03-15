@@ -1,9 +1,11 @@
 #!/usr/bin/perl -w 
 
-## Horizon.tv.ini genre Mapper ##
-## Revision 4 ##
-## DeBaschdi ##
-## takealug.de ##
+##########################################
+## Horizon +tv.de +tvtoday Genre Mapper ##
+## Revision 5                           ##
+## DeBaschdi                            ##
+## takealug.de                          ##
+##########################################
 
 ## Hier werden Die EIT NORM Genre Aufgeführt und definiert##
 my $MOVIE             =    "Movie / Drama";
@@ -100,8 +102,9 @@ my %REPLACE=(
 
  "Movie"  => $MOVIE ,            
  "Spielfilm"  => $MOVIE ,
+ "Filmessay"  => $MOVIE ,
  "Familienfilm" => $MOVIE ,
- "Spielfilm/Sonstige"  => $NONE , 
+ "Spielfilm/Sonstige"  => $MOVIE , 
  "Spielfilme" => $MOVIE ,
  "Drama (film)"  => $MOVIE ,            
  "Drama (filme)"  => $MOVIE ,
@@ -115,6 +118,7 @@ my %REPLACE=(
  "Spielfilm/Thriller"  => $THRILLER ,        
  "Krimi"   => $THRILLER ,         
  "Serie/Krimi"   => $THRILLER ,         
+ "Krimiserie" => $THRILLER ,
  "Spielfilm/Krimi"   => $THRILLER ,        
  "Abenteuer"  => $ADVENTURE ,        
  "Abenteuerfilm" => $ADVENTURE ,
@@ -172,17 +176,20 @@ my %REPLACE=(
  "Nachrichten/Info/Magazin"  => $NEWS_MAGAZINE ,   
  "Dokumentation" => $DOCUMENTARY ,
  "Literaturverfilmung" => $DOCUMENTARY ,
- "Dokufilm" => $DOCUMENTARY ,      
-  "Dokumentarfilm" => $DOCUMENTARY ,      
+ "Dokufilm" => $DOCUMENTARY ,
+ "Modedoku" => $DOCUMENTARY ,
+ "Dokumentarfilm" => $DOCUMENTARY ,      
  "Dokureihe" => $DOCUMENTARY ,      
-  "Doku-Reihe" => $DOCUMENTARY ,      
-  "Dokuserie" => $DOCUMENTARY ,      
-   "Doku" => $DOCUMENTARY ,      
-  "Studio-Doku" => $DOCUMENTARY ,       
-  "Nachrichten/Info/Dokumentation"  => $DOCUMENTARY , 
- "Musikdokureihe"  => $DOCUMENTARY ,      
+ "Doku-Reihe" => $DOCUMENTARY ,      
+ "Dokuserie" => $DOCUMENTARY ,      
+ "Doku" => $DOCUMENTARY ,      
+ "Studio-Doku" => $DOCUMENTARY ,
+ "Dokuporträt" => $DOCUMENTARY ,
+ "Nachrichten/Info/Dokumentation"  => $DOCUMENTARY , 
+ "Musikdokureihe"  => $DOCUMENTARY ,
+ "Drehbericht"  => $DOCUMENTARY ,
  "Talk"  => $DEBATE ,           
-
+ "Gespräch"  => $DEBATE ,
 
  "Series"  => Series ,             
  "Reality"  => $SHOW ,             
@@ -190,30 +197,36 @@ my %REPLACE=(
  "Castingshow"  => $SOAP ,  
  "Unterhaltung/Shows"  => $SHOW,             
  "Unterhaltungsshow"  => $SHOW,
- "Unterhaltung/Game"  => $SHOW ,             
+ "Unterhaltung/Game"  => $SHOW ,
+ "Spielshow"  => $SHOW ,
  "Unterhaltung/Sonstige"  => $NONE ,             
  "Serie/Sonstige" => $NONE ,
  "Sonstiges" => $NONE ,
+ "Programminformation" => $NONE ,
 
  "Show"  => $GAME ,             
  "Unterhaltung"  => $GAME ,             
 
-"Talk Show"  => $TALKSHOW ,         
-  "Unterhaltung/Talkshow"  => $TALKSHOW ,         
+ "Talk Show"  => $TALKSHOW ,         
+ "Unterhaltung/Talkshow"  => $TALKSHOW ,         
 
  "Sport"  => $SPORT ,            
  "Snooker"  => Billard ,          
  "Langlauf"  => $Winter_Sports ,          
+ "Eisschnellauf" => $Winter_Sports ,
  "Autosport"  => $SPORT ,            
  "Sport/Golf"  => $SPORT ,            
  "Radsport"  => $SPORT ,            
  "Sport/Radsport"  => $SPORT ,            
  "Sport/Sonstige"  => $SPORT ,            
- "Extremsport" => $SPORT ,            
+ "Fechten" => $SPORT ,
+ "Extremsport" => $SPORT ,
+ "Curling" => $SPORT ,
  "Special Event"  => $SPORT_SPECIAL ,    
-  "Sport/Besondere Ereignisse"  => $SPORT_SPECIAL ,    
-  "Sport Magazin"  => $SPORT_MAGAZINE ,   
-   "Sport/Reportage"  => $SPORT_MAGAZINE ,   
+ "Sport/Besondere Ereignisse"  => $SPORT_SPECIAL ,    
+ "Sport Magazin"  => $SPORT_MAGAZINE ,   
+ "Sport/Reportage"  => $SPORT_MAGAZINE ,   
+ "Sportnews" => $SPORT_MAGAZINE ,
  "Fußball"  => $FOOTBALL ,         
  "Fussball"  => $FOOTBALL ,         
  "Sport/Fußball"  => $FOOTBALL ,         
@@ -229,7 +242,8 @@ my %REPLACE=(
  "Sport/Leichtathletik"  => $ATHLETICS ,        
  "Motorsport"  => $SPORT_MOTOR ,      
  "Motorradsport"  => $SPORT_MOTOR ,      
- "Sport/Motorsport"  => $SPORT_MOTOR ,      
+ "Sport/Motorsport"  => $SPORT_MOTOR ,
+ "Formel 1"  => $SPORT_MOTOR ,
 
  "Wassersport"  => $SPORT_WATER , 
  "Sport/Wassersport"  => $SPORT_WATER ,
@@ -253,7 +267,7 @@ my %REPLACE=(
  "Jugendfilm" => $KIDS ,
  "Märchenfilm" => $KIDS ,
  "Kinder/Jugend/Serien" => $KIDS ,             
-  "Kinderabenteuer" => $KIDS ,             
+ "Kinderabenteuer" => $KIDS ,             
  "Kinder/Jugend/Show" => $KIDS ,
  "Kinderkomödie" => $KIDS ,
  "Kinderkrimi" => $KIDS ,
@@ -274,14 +288,19 @@ my %REPLACE=(
  "Musikfilm"  => $MUSIC ,            
  "Easy Listening"  => $MUSIC ,            
  "Musik/Sonstige" => $NONE ,
-  "Clipcharts" => $MUSIC , 
+ "Clipcharts" => $MUSIC , 
  "Ballett"  => $MUSIC ,            
-  "Tanz"  => $MUSIC ,            
-  "Ballet" => $MUSIC ,
-  "Tanzdoku"  => $MUSIC ,            
-  "Musikdoku"  => $MUSIC ,            
-  "Rock"  => $ROCK_POP ,         
-  "Pop"  => $ROCK_POP ,         
+ "Tanz"  => $MUSIC ,            
+ "Ballet" => $MUSIC ,
+ "Tanzdoku"  => $MUSIC ,            
+ "Musikdoku"  => $MUSIC , 
+ "Zeitgenössische Musik"  => $MUSIC ,
+ "Muzyka"  => $MUSIC ,
+ "Musik-Clips"  => $MUSIC ,
+ "Talk und Musik"  => $MUSIC ,
+ "Rock"  => $ROCK_POP ,         
+ "Pop"  => $ROCK_POP , 
+ "Rock und Pop"  => $ROCK_POP ,
  "Klassik"  => $CLASSICAL ,        
  "Volksmusik"  => $FOLK ,             
  "Jazz"  => $JAZZ ,             
@@ -290,34 +309,38 @@ my %REPLACE=(
  "Musik/Oper"  => $OPERA ,            
  "Spielfilm/Musical"  => $OPERA ,            
  "Konzert"               =>$OPERA ,
-"Oper"  => $OPERA ,            
-"Kunst"  => $CULTURE ,         
-"Kunst Magazin"  => $CULTURE ,         
-"Kunstmagazin"  => $CULTURE ,         
-"Kunstdoku"  => $CULTURE ,         
-  "Kunstreportage"  => $CULTURE ,         
+ "Oper"  => $OPERA ,            
+ "Kunst"  => $CULTURE ,         
+ "Kunst Magazin"  => $CULTURE ,         
+ "Kunstmagazin"  => $CULTURE ,         
+ "Kunstdoku"  => $CULTURE ,         
+ "Kunstreportage"  => $CULTURE ,         
  "Lifestyle"  => $CULTURE ,         
  "Unterhaltung/Lifestyle"  => $CULTURE ,         
  "Kultur"  => $CULTURE ,         
  "Darstellende Kunst"  => $PERFORMING ,       
  "Darst. Kunst"  => $PERFORMING ,       
  "Porträt"  => $PERFORMING ,       
-  "Portrait"  => $PERFORMING ,       
+ "Portrait"  => $PERFORMING ,       
  "Bildende Kunst"  => $FINE_ARTS ,        
  "Religion"  => $RELIGION ,         
- "Themen/Religion"  => $RELIGION ,         
+ "Themen/Religion"  => $RELIGION ,
+ "Kirche und Religion"  => $RELIGION ,
  "Populäre Kunst"  => $POPULAR_ART ,      
  "Literatur"  => $LITERATURE ,       
  "Literaturmagazin" => $LITERATURE ,
  "Film"  => $FILM ,             
-  "Kino"  => $FILM ,             
+ "Kino"  => $FILM ,             
  "Politik"  => $SOCIAL ,           
  "Themen/Politik"  => $SOCIAL ,          
  "Magazin"  => $MAGAZINE ,         
-  "Wissen"  => $MAGAZINE ,         
- "Reportage"  => $MAGAZINE ,         
+ "Wissen"  => $MAGAZINE ,         
+ "Reportage"  => $MAGAZINE ,
+ "Designreportage"  => $MAGAZINE ,
  "Report" => $MAGAZINE ,
- "Reportagereihe"  => $MAGAZINE ,         
+ "Reportagereihe"  => $MAGAZINE ,
+ "Infomagazin"  => $MAGAZINE ,
+ "Regionalmagazin"  => $MAGAZINE ,
  "Wissenschaft"  => $ECONOMIC ,         
  "Themen/Wissenschaft"  => $ECONOMIC ,         
  "Wirtschaft"  => $ECONOMIC ,         
@@ -328,23 +351,26 @@ my %REPLACE=(
  "Fortbildung" => $SCIENCE ,
  "Bildung"  => $SCIENCE ,          
  "Themen/Bildung" => $SCIENCE ,          
-  "Geschichte"  => $SCIENCE ,          
-   "Themen/Geschichte"  => $SCIENCE ,          
+ "Geschichte"  => $SCIENCE ,          
+ "Themen/Geschichte"  => $SCIENCE ,          
  "Natur"  => $NATURE ,           
- "Themen/Natur"  => $NATURE ,           
+ "Themen/Natur"  => $NATURE ,
+ "Kamerafahrt"  => $NATURE ,
  "Technologie"  => $TECHNOLOGY ,       
-"Medizin"  => $MEDECINE ,         
+ "Medizin"  => $MEDECINE ,         
  "Expeditionen"  => $FOREIGN ,          
  "Soziales"  => $SPIRITUAL ,        
 
- "Sprachen"  => $LANGUAGES ,       
- "Freizeit"  => $HOBBIES ,          
+ "Sprachen"  => $LANGUAGES , 
+ "USA"  => $LANGUAGES ,
+ "Freizeit"  => $HOBBIES ,
+ "Freizeit und Hobby"  => $HOBBIES ,
  "Garten"  => $HOBBIES ,          
  "Unterhaltung/Haus&Garten"  => $HOBBIES ,          
  "Special Interest/Sonstige"  => $NONE ,          
  "Reisen"  => $TRAVEL ,           
-"Themen/Reise"  => $TRAVEL ,           
-"Reisedoku"  => $TRAVEL ,           
+ "Themen/Reise"  => $TRAVEL ,           
+ "Reisedoku"  => $TRAVEL ,           
  "Unterhaltung/Kunst und Handwerk"  => $HANDICRAF ,
  "Heimwerken" => $HANDICRAF ,
  
@@ -352,12 +378,14 @@ my %REPLACE=(
  "Rund Ums Auto"  => $MOTORING ,         
  "Gesundheit"  => $FITNESS ,          
  "Themen/Gesundheit" => $FITNESS ,          
- "Kochen"  => $COOKING ,          
+ "Kochen"  => $COOKING , 
+ "Kochshow"  => $COOKING ,
  "Unterhaltung/Kochen"  => $COOKING ,          
- "Shopping"  => $SHOPPING ,         
-"Mode"  => $GARDENING ,        
+ "Shopping"  => $SHOPPING , 
+ "Werbesendung" => $SHOPPING ,
+ "Mode"  => $GARDENING ,        
  "Liveübertragung"  => $LIVE ,        
-"Undefiniert" => $NONE ,
+ "Undefiniert" => $NONE ,
 
  ) ; 
 
@@ -374,21 +402,8 @@ sub myfilter {
   }
 }
 
-
 while (<>) {
     my $line = $_ ;
-    if ($line =~ /'(n)'/)
-       {       
-        $line =~ tr/\(n)//;
-       }    
-    if ($line =~ /parentId/)
-       {
-        @fields = split/,/, $line;
-           $zeile = $fields[0];
-           $anhang = $zeile."</sub-title>\n";
-           $line = $anhang;
-       }
-
-        $line =~ s/($PRE)(.*)($POST)/"$1".myfilter("$2")."$3"/ge ;
+    $line =~ s/($PRE)(.*)($POST)/"$1".myfilter("$2")."$3"/ge ;
     print $line;
-} 
+}  
