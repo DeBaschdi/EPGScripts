@@ -14,7 +14,7 @@ use Term::ANSIColor;
 #####################################
 
 #Path to php helper-scripts i.E Path to "age.php"
-my $path= "/home/bastian/imdbmapper/imdbmapper" ;                                  
+my $path= "/my/path/to/php/helperscripts" ;                                  
 # Max Cachetime in Days
 my $cachetime = 5; 
 
