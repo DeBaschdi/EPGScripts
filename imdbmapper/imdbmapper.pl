@@ -8,13 +8,24 @@ use Term::ANSIColor;
 
 #####################################
 ## ImdbMapper                      ##
-## Revision 2 20190310             ##
+## Revision 3 20190315             ##
 ## takealug.de                     ##
 ## https://github.com/sunsettrack4 ##
 #####################################
 
 #Path to php helper-scripts i.E Path to "age.php"
-my $path= "/apps/epgloader/imdbmapper" ;                                  
+my $path= "/home/bastian/imdbmapper/imdbmapper" ;                                  
+# Max Cachetime in Days
+my $cachetime = 5; 
+
+
+#Check if path to Helperscripts exist
+if (-e "$path/age.php")
+{
+    print STDERR color("green"), "Helperscripts Found OK\n", color("reset");
+} else {
+    die color("red"), "Can´t open php Helperscripts in $path, please check Line 17 in imdbmapper.pl\n $!" , color("reset") ;
+} 
 
 my $num_args = $#ARGV + 1;
 if ($num_args != 1) {
@@ -22,6 +33,18 @@ if ($num_args != 1) {
   exit;
 }
 
+#Delete all files older $cachetime
+print STDERR "Deleting all Cached Files older then $cachetime Days\n";
+
+my $cachefolder = "$path/cache/" ;
+
+opendir(my $cache, $cachefolder);
+while (readdir($cache)) {
+    my $cachefiles = "$cachefolder/$_";
+    if (-f $cachefiles and -M $cachefiles > $cachetime) {
+        unlink $cachefiles;
+    }
+}
 
 my $xmlfile=$ARGV[0];
 my $parser=new XML::DOM::Parser;
