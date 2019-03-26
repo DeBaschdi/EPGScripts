@@ -239,7 +239,10 @@ sub myfilter {
   my ($a) = @_;
   if ( exists $REPLACE{$a} ) {     
       return $REPLACE{$a} ;
-  }
+  }else {
+      print STDERR "Warning: Unmanaged channel: '$a'\n" ;
+      return $a ;
+   }
 }
 
 while (<>) {
