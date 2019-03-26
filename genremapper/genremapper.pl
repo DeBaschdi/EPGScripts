@@ -1,8 +1,9 @@
 #!/usr/bin/perl -w 
 
 ##########################################
-## Horizon +tv.de +tvtoday Genre Mapper ##
-## Revision 5                           ##
+## Horizon +tv.de +tvtoday +Magentatv   ##
+## Mapper                               ##
+## Revision 6                           ##
 ## DeBaschdi                            ##
 ## takealug.de                          ##
 ##########################################
@@ -135,11 +136,13 @@ my %REPLACE=(
  "Spielfilm/Science fiction"  => $SF ,               
  "Serie/Science fiction"  => $SF ,               
  "Fantasyabenteuer" => $SF ,
+ "Fantasy" => $SF ,
  "Horror"  => $SF ,               
  "Spielfilm/Horror"  => $SF ,               
  "Spielfilm/Fantasy"  => $SF ,              
  "Fantasyfilm" => $SF ,
  "Science-Fiction-Action" => $SF ,
+ "ScienceFiction" => $SF ,
  "Komödie"  => $COMEDY ,           
  "Teenagerkomödie" => $COMEDY ,
  "Fantasykomödie" => $COMEDY ,
@@ -150,21 +153,27 @@ my %REPLACE=(
  "Unterhaltung/Comedy" => $COMEDY , 
  "Weihnachtskomödie" => $COMEDY ,
  "Actionkomödie" => $COMEDY ,
+ "Comedy" => $COMEDY ,
+ "Satire" => $COMEDY ,
  "Drama (serie)"  => $SOAP ,             
  "Serie/Drama"  => $SOAP , 
  "Series Drama" => $SOAP ,
  "Serie/Soap"  => $SOAP ,             
- "Theater"  => $SOAP ,            
+ "Theater"  => $SOAP ,
+ "Soap"  => $SOAP ,
+ "Sitcom"  => $SOAP ,
  "Romance"  => $ROMANCE ,          
  "Serie/Romantik"  => $ROMANCE ,          
  "Spielfilm/Romantik"  => $ROMANCE ,          
  "Liebesfilm" => $ROMANCE ,
- "Romanze"  => $ROMANCE ,          
+ "Romanze"  => $ROMANCE ,  
+ "Romantik"  => $ROMANCE ,
  "Heimatfilm"  => $HISTORICAL ,       
  "Historienfilm"  => $HISTORICAL ,       
  "Erotik"  => $XXX ,              
  "Erotik/Spielfilm-Erotik" => $XXX ,             
- "Erotik/Serie-Erotik" => $XXX ,              
+ "Erotik/Serie-Erotik" => $XXX ,
+ "Erotischer Film" => $XXX ,
 
  "Nachrichten"  => $NEWS ,                        
  "Nachrichten/Info/Sonstige" => $NEWS ,
@@ -188,6 +197,7 @@ my %REPLACE=(
  "Nachrichten/Info/Dokumentation"  => $DOCUMENTARY , 
  "Musikdokureihe"  => $DOCUMENTARY ,
  "Drehbericht"  => $DOCUMENTARY ,
+ "Dokusoap"  => $DOCUMENTARY ,
  "Talk"  => $DEBATE ,           
  "Gespräch"  => $DEBATE ,
 
@@ -207,11 +217,13 @@ my %REPLACE=(
  "Show"  => $GAME ,             
  "Unterhaltung"  => $GAME ,             
 
- "Talk Show"  => $TALKSHOW ,         
+ "Talk Show"  => $TALKSHOW ,  
  "Unterhaltung/Talkshow"  => $TALKSHOW ,         
-
- "Sport"  => $SPORT ,            
- "Snooker"  => Billard ,          
+ "Talkshow"  => $TALKSHOW , 
+ 
+ "Sport"  => $SPORT ,
+ "Basketball"  => $SPORT ,
+ "Snooker"  => $SPORT ,          
  "Langlauf"  => $Winter_Sports ,          
  "Eisschnellauf" => $Winter_Sports ,
  "Autosport"  => $SPORT ,            
@@ -282,7 +294,8 @@ my %REPLACE=(
  "Zeichentrickfilm"  => $CARTOON ,
  "Animationsfilm" => $CARTOON ,
  "Trickfilm" => $CARTOON ,
- "Spielfilm/Zeichentrick" => $CARTOON ,          
+ "Spielfilm/Zeichentrick" => $CARTOON ,  
+ "Animation" => $CARTOON ,
 
  "Musik"  => $MUSIC ,            
  "Musikfilm"  => $MUSIC ,            
@@ -321,7 +334,8 @@ my %REPLACE=(
  "Darstellende Kunst"  => $PERFORMING ,       
  "Darst. Kunst"  => $PERFORMING ,       
  "Porträt"  => $PERFORMING ,       
- "Portrait"  => $PERFORMING ,       
+ "Portrait"  => $PERFORMING ,  
+ "Biografie"  => $PERFORMING , 
  "Bildende Kunst"  => $FINE_ARTS ,        
  "Religion"  => $RELIGION ,         
  "Themen/Religion"  => $RELIGION ,
@@ -332,7 +346,8 @@ my %REPLACE=(
  "Film"  => $FILM ,             
  "Kino"  => $FILM ,             
  "Politik"  => $SOCIAL ,           
- "Themen/Politik"  => $SOCIAL ,          
+ "Themen/Politik"  => $SOCIAL ,
+ "Gesellschaft"  => $SOCIAL ,
  "Magazin"  => $MAGAZINE ,         
  "Wissen"  => $MAGAZINE ,         
  "Reportage"  => $MAGAZINE ,
@@ -356,6 +371,7 @@ my %REPLACE=(
  "Natur"  => $NATURE ,           
  "Themen/Natur"  => $NATURE ,
  "Kamerafahrt"  => $NATURE ,
+ "Natur und Tiere"  => $NATURE ,
  "Technologie"  => $TECHNOLOGY ,       
  "Medizin"  => $MEDECINE ,         
  "Expeditionen"  => $FOREIGN ,          
@@ -373,9 +389,12 @@ my %REPLACE=(
  "Reisedoku"  => $TRAVEL ,           
  "Unterhaltung/Kunst und Handwerk"  => $HANDICRAF ,
  "Heimwerken" => $HANDICRAF ,
+ "Heimwerker" => $HANDICRAF ,
  
-
- "Rund Ums Auto"  => $MOTORING ,         
+ "Ratgeber"  => $FURTHER_EDUCATION ,
+ 
+ "Rund Ums Auto"  => $MOTORING ,
+ "Auto"  => $MOTORING ,
  "Gesundheit"  => $FITNESS ,          
  "Themen/Gesundheit" => $FITNESS ,          
  "Kochen"  => $COOKING , 
@@ -386,7 +405,8 @@ my %REPLACE=(
  "Mode"  => $GARDENING ,        
  "Liveübertragung"  => $LIVE ,        
  "Undefiniert" => $NONE ,
-
+ "Verschiedenes" => $NONE ,
+ 
  ) ; 
 
 my $PRE  = '<category lang=\"de\">' ;
