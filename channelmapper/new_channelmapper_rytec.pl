@@ -1,4 +1,4 @@
-#!/usr/bin/perl -w
+   #!/usr/bin/perl -w
 
 # NEW CHANNEL ID MAPPER
 # CONVERT CHANNEL NAMES INTO RYTEC IDs
@@ -134,10 +134,6 @@ my %REPLACE=(
     "SPORT1+"			=>			"SPORT1Plus.de" ,
     "eSPORTS1"			=>			"Sport1US.de" ,
     "sportdigital"		=>			"sportdigital.de" ,
-    "Blue Hustler"		=>			"BlueHustler.ero" ,
-    "Lust pur"			=>			"LustPur.de" ,
-    "Penthouse"			=>			"PenthouseHDde.ero" ,
-    "Playboy Europe"	=>			"PlayboyTV.ero" ,
     "RCK TV"			=>			"RCKTV.de" ,
     "Trace Urban"		=>			"TraceUrban.fr" ,
     "MyTeam TV - Basketball 1"			=>			"MyTeamTVBasketball1.de" ,
@@ -239,7 +235,6 @@ my %REPLACE=(
     "Fox"				=>			"Fox.de" ,
     "Spiegel Geschichte"	=>			"SpiegelGeschichte.de" ,
     "SkyKrimi"			=>			"SkyKrimi.de" ,
-    "Beate-Uhse.TV"		=>			"BeateUhse.de" ,
     "Classica"			=>			"Classica.eu" ,
     "Jukebox"			=>			"Jukebox.de" ,
     "Junior"			=>			"Junior.de" ,
@@ -431,7 +426,7 @@ my %REPLACE=(
     "Teleclub Sport Live 39"	=>			"TCSportLive39.ch" ,
     "Teleclub Sport Live 1 UHD"		=>			"TCSportLive1UHD.ch" ,
     "Teleclub Sport Live 2 UHD"		=>			"TCSportLive2UHD.ch" ,
-    "Teleclub Sport Live 3 UHD UHD"	=>			"TCSportLive3UHD.ch" ,
+    "Teleclub Sport Live 3 UHD"	=>			"TCSportLive3UHD.ch" ,
     "Teleclub Sport Live 4 UHD"		=>			"TCSportLive4UHD.ch" ,
     "Teleclub Sports"			=>			"TCSports.ch" ,
     "Teleclub Sports Live 1"	=>			"TCSportsLive1.ch" ,
@@ -551,6 +546,27 @@ my %REPLACE=(
     "Teleclub Sports Event 2 UHD"	=>			"TCSportsEvent2UHD.ch" ,
     "Teleclub Sports Event 3 UHD"	=>			"TCSportsEvent3UHD.ch" ,
     "Teleclub Sports Event 4 UHD"	=>			"TCSportsEvent4UHD.ch" ,
+    
+    
+    "Lust pur"			=>			"LustPur.de" ,
+    "Penthouse 1"			=>			"PenthouseHD1de.ero" ,
+    "Penthouse 2"			=>			"PenthouseHD2de.ero" ,
+    "Playboy Europe"	=>			"PlayboyTV.ero" ,
+    "Beate-Uhse.TV"		=>			"BeateUhse.de" ,
+    "XXL" =>			"XXLfull.ero" ,
+    "Dorcel TV" =>			"Dorcel.ero" ,
+    "Private TV" =>			"PrivateTV.ero" ,
+    "Blue Hustler"		=>			"BlueHustler.ero" ,
+    "Hustler TV"		=>			"HustlerTV.ero" ,
+    "Evil Angel TV"		=>			"EvilAngelTV.ero" ,
+    "Vivid RED"		=>			"VividRed.ero" ,
+    "Vivid Touch"		=>			"VividTouch.ero" ,
+    "DUSK" =>			"DuskTV.ero" ,
+    "Brazzers TV Europe"  =>			"Brazzers.ero" ,
+    "PassieXXX"  =>			"PassieXXX.ero" ,
+    "Bluemovie 1" =>			"BlueMovie1.de" ,
+    "Bluemovie 2" =>			"BlueMovie2.de" ,
+    "Bluemovie 3" =>			"BlueMovie3.de" ,
  ) ;
 
 my $PRE  = 'channel="' ;
