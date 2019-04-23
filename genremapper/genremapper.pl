@@ -190,7 +190,8 @@ my %REPLACE=(
 
 ###AB Hier werden die Grabber Genre/category nach unseren definierten EIT Genre gemappt###
 
- "Movie"  => $MOVIE ,            
+ "Movie"  => $MOVIE ,
+ "movie"  => $MOVIE ,           
  "Spielfilm"  => $MOVIE ,
  "Filmessay"  => $MOVIE ,
  "Familienfilm" => $MOVIE ,
@@ -260,7 +261,8 @@ my %REPLACE=(
  "Romantik"  => $ROMANCE ,
  "Heimatfilm"  => $HISTORICAL ,       
  "Historienfilm"  => $HISTORICAL ,       
- "Erotik"  => $XXX ,              
+ "Erotik"  => $XXX ,
+ "Adult"  => $XXX ,            
  "Erotik/Spielfilm-Erotik" => $XXX ,             
  "Erotik/Serie-Erotik" => $XXX ,
  "Erotischer Film" => $XXX ,
