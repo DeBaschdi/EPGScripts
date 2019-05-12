@@ -8,13 +8,13 @@ use Term::ANSIColor;
 
 #####################################
 ## ImdbMapper                      ##
-## Revision 3 20190315             ##
+## Revision 4 20190508             ##
 ## takealug.de                     ##
 ## https://github.com/sunsettrack4 ##
 #####################################
 
 #Path to php helper-scripts i.E Path to "age.php"
-my $path= "/my/path/to/php/helperscripts" ;                                  
+my $path= "/home/takealug/EPG/takealug/imdbmapper" ;                                  
 # Max Cachetime in Days
 my $cachetime = 5; 
 
@@ -107,7 +107,7 @@ foreach my $program(@program) {
            $CategoryElement1 eq 'Winter sports' ||                                   $CategoryElement1 eq 'Equestrian' ||
            $CategoryElement1 eq 'Children\'s / Youth programs' ||                    $CategoryElement1 eq 'Pre-school children\'s programs' || 
            $CategoryElement1 eq 'Entertainment programs for 6 to 14' ||              $CategoryElement1 eq 'Entertainment programs for 10 to 16' ||
-           $CategoryElement1 eq 'Cartoons / Puppets' ||
+           $CategoryElement1 eq 'Cartoons / Puppets' ||                              $CategoryElement1 eq 'Adult movie / Drama' ||
            $CategoryElement1 eq 'Martial Sports' ||                                  $CategoryElement1 eq 'Informational / Educational / School programs' ||
            $CategoryElement1 eq 'Music / Ballet / Dance' ||                          $CategoryElement1 eq 'Rock / Pop' || 
            $CategoryElement1 eq 'Serious music / Classical music' ||                 $CategoryElement1 eq 'Folk / Traditional music' || 
@@ -126,7 +126,8 @@ foreach my $program(@program) {
            $CategoryElement1 eq 'Motoring' ||                                        $CategoryElement1 eq 'Fitness and health' || 
            $CategoryElement1 eq 'Cooking' ||                                         $CategoryElement1 eq 'Advertisement / Shopping' || 
            $CategoryElement1 eq 'Gardening' ||                                       $CategoryElement1 eq 'Fashion' || 
-           $CategoryElement1 eq 'Keine Informationen Enthalten' ||                   $CategoryElement1 eq 'Live Broadcast')
+           $CategoryElement1 eq 'Keine Informationen Enthalten' ||                   
+           $CategoryElement1 eq 'Live Broadcast')
        {
         $categoryFILTER1von3 = "skipped";
        } else {
@@ -146,7 +147,7 @@ foreach my $program(@program) {
            $CategoryElement2 eq 'Winter sports' ||                                   $CategoryElement2 eq 'Equestrian' || 
            $CategoryElement2 eq 'Children\'s / Youth programs' ||                    $CategoryElement2 eq 'Pre-school children\'s programs' || 
            $CategoryElement2 eq 'Entertainment programs for 6 to 14' ||              $CategoryElement2 eq 'Entertainment programs for 10 to 16' ||
-           $CategoryElement2 eq 'Cartoons / Puppets' ||
+           $CategoryElement2 eq 'Cartoons / Puppets' ||                              $CategoryElement2 eq 'Adult movie / Drama' ||
            $CategoryElement2 eq 'Martial Sports' ||                                  $CategoryElement2 eq 'Informational / Educational / School programs' ||
            $CategoryElement2 eq 'Music / Ballet / Dance' ||                          $CategoryElement2 eq 'Rock / Pop' || 
            $CategoryElement2 eq 'Serious music / Classical music' ||                 $CategoryElement2 eq 'Folk / Traditional music' || 
@@ -165,7 +166,8 @@ foreach my $program(@program) {
            $CategoryElement2 eq 'Motoring' ||                                        $CategoryElement2 eq 'Fitness and health' || 
            $CategoryElement2 eq 'Cooking' ||                                         $CategoryElement2 eq 'Advertisement / Shopping' || 
            $CategoryElement2 eq 'Gardening' ||                                       $CategoryElement2 eq 'Fashion' || 
-           $CategoryElement2 eq 'Keine Informationen Enthalten' ||                   $CategoryElement2 eq 'Live Broadcast')
+           $CategoryElement2 eq 'Keine Informationen Enthalten' ||                   
+           $CategoryElement2 eq 'Live Broadcast')
        {
         $categoryFILTER2von3 = "skipped";
        } else {
@@ -185,7 +187,7 @@ foreach my $program(@program) {
            $CategoryElement3 eq 'Winter sports' ||                                   $CategoryElement3 eq 'Equestrian' || 
            $CategoryElement3 eq 'Children\'s / Youth programs' ||                    $CategoryElement3 eq 'Pre-school children\'s programs' || 
            $CategoryElement3 eq 'Entertainment programs for 6 to 14' ||              $CategoryElement3 eq 'Entertainment programs for 10 to 16' ||
-           $CategoryElement3 eq 'Cartoons / Puppets' ||
+           $CategoryElement3 eq 'Cartoons / Puppets' ||                              $CategoryElement3 eq 'Adult movie / Drama' ||
            $CategoryElement3 eq 'Martial Sports' ||                                  $CategoryElement3 eq 'Informational / Educational / School programs' ||
            $CategoryElement3 eq 'Music / Ballet / Dance' ||                          $CategoryElement3 eq 'Rock / Pop' || 
            $CategoryElement3 eq 'Serious music / Classical music' ||                 $CategoryElement3 eq 'Folk / Traditional music' || 
@@ -204,7 +206,8 @@ foreach my $program(@program) {
            $CategoryElement3 eq 'Motoring' ||                                        $CategoryElement3 eq 'Fitness and health' || 
            $CategoryElement3 eq 'Cooking' ||                                         $CategoryElement3 eq 'Advertisement / Shopping' || 
            $CategoryElement3 eq 'Gardening' ||                                       $CategoryElement3 eq 'Fashion' || 
-           $CategoryElement3 eq 'Keine Informationen Enthalten' ||                   $CategoryElement3 eq 'Live Broadcast')
+           $CategoryElement3 eq 'Keine Informationen Enthalten' ||                   
+           $CategoryElement3 eq 'Live Broadcast')
        {
         $categoryFILTER3von3 = "skipped";
        } else {
