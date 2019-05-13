@@ -13,7 +13,7 @@ binmode (STDERR,"encoding(utf8)");
 
 #####################################
 ## ImdbMapper                      ##
-## Revision 5 20190513             ##
+## Revision 6 20190513             ##
 ## takealug.de                     ##
 ## https://github.com/sunsettrack4 ##
 #####################################
@@ -137,8 +137,8 @@ foreach my $program(@program) {
            $CategoryElement1 eq 'Motoring' ||                                        $CategoryElement1 eq 'Fitness and health' || 
            $CategoryElement1 eq 'Cooking' ||                                         $CategoryElement1 eq 'Advertisement / Shopping' || 
            $CategoryElement1 eq 'Gardening' ||                                       $CategoryElement1 eq 'Fashion' || 
-           $CategoryElement1 eq 'Keine Informationen Enthalten' ||                   
-           $CategoryElement1 eq 'Live Broadcast')
+           $CategoryElement1 eq 'Keine Informationen Enthalten' ||                   $CategoryElement1 eq 'Serious / Classical / Religious / Historical movie / Drama' ||
+           $CategoryElement1 eq 'Live Broadcast')                                    
        {
         $categoryFILTER1von3 = "skipped";
        } else {
@@ -177,7 +177,7 @@ foreach my $program(@program) {
            $CategoryElement2 eq 'Motoring' ||                                        $CategoryElement2 eq 'Fitness and health' || 
            $CategoryElement2 eq 'Cooking' ||                                         $CategoryElement2 eq 'Advertisement / Shopping' || 
            $CategoryElement2 eq 'Gardening' ||                                       $CategoryElement2 eq 'Fashion' || 
-           $CategoryElement2 eq 'Keine Informationen Enthalten' ||                   
+           $CategoryElement2 eq 'Keine Informationen Enthalten' ||                   $CategoryElement2 eq 'Serious / Classical / Religious / Historical movie / Drama' ||
            $CategoryElement2 eq 'Live Broadcast')
        {
         $categoryFILTER2von3 = "skipped";
@@ -217,7 +217,7 @@ foreach my $program(@program) {
            $CategoryElement3 eq 'Motoring' ||                                        $CategoryElement3 eq 'Fitness and health' || 
            $CategoryElement3 eq 'Cooking' ||                                         $CategoryElement3 eq 'Advertisement / Shopping' || 
            $CategoryElement3 eq 'Gardening' ||                                       $CategoryElement3 eq 'Fashion' || 
-           $CategoryElement3 eq 'Keine Informationen Enthalten' ||                   
+           $CategoryElement3 eq 'Keine Informationen Enthalten' ||                   $CategoryElement3 eq 'Serious / Classical / Religious / Historical movie / Drama' ||
            $CategoryElement3 eq 'Live Broadcast')
        {
         $categoryFILTER3von3 = "skipped";
