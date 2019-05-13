@@ -39,7 +39,7 @@ print STDERR "Deleting all Cached Files older then $cachetime Days\n";
 my $cachefolder = "$path/cache/" ;
 
 if ( !-d $cachefolder ) {
-    make_path $cachefolder or die "Failed to create path: $cachefolder";
+    mkdir $cachefolder or die "Failed to create path: $cachefolder";
 }
 
 opendir(my $cache, $cachefolder);
