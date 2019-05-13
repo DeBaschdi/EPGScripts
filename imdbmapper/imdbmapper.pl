@@ -1,10 +1,15 @@
-#!/usr/bin/perl -w 
+#!/usr/bin/perl -w
 
+use utf8;
 use strict;
 use warnings;
 use Data::Dumper;
 use XML::DOM;
 use Term::ANSIColor;
+
+
+binmode (STDOUT,"encoding(utf8)");
+binmode (STDERR,"encoding(utf8)");
 
 #####################################
 ## ImdbMapper                      ##
@@ -15,16 +20,18 @@ use Term::ANSIColor;
 
 #Path to php helper-scripts i.E Path to "age.php"
 my $path= "/home/takealug/EPG/takealug/imdbmapper" ;                                  
+
 # Max Cachetime in Days
 my $cachetime = 5; 
 
 
 #Check if path to Helperscripts exist
-if (-e "$path/age.php")
+
+if (-e "$path/age.php" && -e "$path/country.php"  && -e "$path/imdb.class.php"  && -e "$path/poster.php"  && -e "$path/rating.php"  && -e "$path/url.php"  && -e "$path/year.php"  )
 {
     print STDERR color("green"), "Helperscripts Found OK\n", color("reset");
 } else {
-    die color("red"), "Can´t open php Helperscripts in $path, please check Line 17 in imdbmapper.pl\n $!" , color("reset") ;
+    die color("red"), "Can´t open one or more php Helperscripts in Folder $path, please check Line 22 in imdbmapper.pl\n $!" , color("reset") ;
 } 
 
 my $num_args = $#ARGV + 1;
