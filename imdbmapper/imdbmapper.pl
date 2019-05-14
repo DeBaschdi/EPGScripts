@@ -8,12 +8,12 @@ use XML::DOM;
 use Term::ANSIColor;
 
 
-binmode (STDOUT,"encoding(utf8)");
+
 binmode (STDERR,"encoding(utf8)");
 
 #####################################
 ## ImdbMapper                      ##
-## Revision 6 20190513             ##
+## Revision 7 20190514             ##
 ## takealug.de                     ##
 ## https://github.com/sunsettrack4 ##
 #####################################
