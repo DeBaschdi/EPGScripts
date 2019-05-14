@@ -539,8 +539,8 @@ my %REPLACE=(
  "Verschiedenes" => $NONE ,
  "Variety Show" => $VARIETY ,
  
- "Queer"  => Queer ,
- "tvshow" => tvshow ,
+ "Queer"  => $NONE ,
+ "tvshow" => $NONE ,
  ) ; 
 
 my $PRE  = '<category lang=\"de\">' ;
