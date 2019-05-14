@@ -3,7 +3,7 @@
 ##########################################
 ## Horizon +tv.de +tvtoday +Magentatv   ##
 ## Mapper                               ##
-## Revision 7                           ##
+## Revision 8                           ##
 ## DeBaschdi                            ##
 ## takealug.de                          ##
 ##########################################
@@ -272,6 +272,7 @@ my %REPLACE=(
  "program erotyczny" => $XXX ,
  "Proprietary" => $XXX ,
  "VOLWASSENEN" => $XXX ,
+ "film erotyczny" => $XXX ,
  "Nachrichten"  => $NEWS ,
  "News"      => $NEWS ,
  "Wiadomości"  => $NEWS ,
