@@ -16,3 +16,6 @@ IMDBb Engine is forked from : https://github.com/FabianBeiner/PHP-IMDB-Grabber
 • EPGScripts/ratingmapper/ratingmapper.pl converts any xmltv.xml file for viewing country,date,age-rating,star-rating like
   (USA) 2009 • FSK 12 • IMDb ★★★★☆ on top of the description.
 usage : ratingmapper.pl old.xml > new.xml
+
+• EPGScripts/tvgidmapper/tvgidmapper.pl perl script converts any tvgidś in an IPTV.m3u List file to comply with the Provided Channelidś in EPG.xml
+usage : tvgidmapper.pl  old.m3u > new.m3u
