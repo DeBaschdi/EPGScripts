@@ -25,7 +25,7 @@ if (-e "$path/age.php" && -e "$path/country.php"  && -e "$path/imdb.class.php"  
 {
     print STDERR color("green"), "Helperscripts Found OK\n", color("reset");
 } else {
-    die color("red"), "Can´t open one or more php Helperscripts in Folder $path, please check Line 22 in imdbmapper.pl\n $!" , color("reset") ;
+    die color("red"), "Can´t open one or more php Helperscripts in Folder $path, please check Line 18 in run.pl\n $!" , color("reset") ;
 } 
 
 my $num_args = $#ARGV + 1;
