@@ -380,7 +380,7 @@ print STDERR "IMDB Search in Pass 1 complete\n";
 
 
 
-my $tempfile="/tmp/xmltv.xml_temp3";
+my $tempfile="/tmp/xmltv.xml_temp1";
 $doc->printToFile($tempfile);
 $doc->dispose;
 
