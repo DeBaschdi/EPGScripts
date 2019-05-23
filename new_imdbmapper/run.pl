@@ -76,6 +76,8 @@ if ( -e "$xml_temp/workfile-02.xml") {
     qx{"$path"/imdbtask_1.pl "$xml_temp"workfile-01.xml > "$xml_temp"mappedfile-01.xml};
 }
 
+wait;
+
 if ( -e "$xml_temp/workfile-04.xml") {
     print STDERR "Reading XML Part 3 & Part 4 Together for faster ImdB Download\n";
     qx{"$path/imdbtask_1.pl" "$xml_temp"workfile-03.xml > "$xml_temp"mappedfile-03.xml & "$path/imdbtask_2.pl" "$xml_temp"workfile-04.xml > "$xml_temp"mappedfile-04.xml};
@@ -84,6 +86,8 @@ if ( -e "$xml_temp/workfile-04.xml") {
       print STDERR "Reading XML Part 3\n";
       qx{"$path/imdbtask_1.pl" "$xml_temp"workfile-03.xml > "$xml_temp"mappedfile-03.xml};
 }}
+
+wait;
 
 if ( -e "$xml_temp/workfile-06.xml") {
     print STDERR "Reading XML Part 5 & Part 6 Together for faster ImdB Download\n";
@@ -94,6 +98,8 @@ if ( -e "$xml_temp/workfile-06.xml") {
       qx{"$path/imdbtask_1.pl" "$xml_temp"workfile-05.xml > "$xml_temp"mappedfile-05.xml};
 }}
 
+wait;
+
 if ( -e "$xml_temp/workfile-08.xml") {
     print STDERR "Reading XML Part 7 & Part 8 Together for faster ImdB Download\n";
     qx{"$path/imdbtask_1.pl" "$xml_temp"workfile-07.xml > "$xml_temp"mappedfile-07.xml & "$path/imdbtask_2.pl" "$xml_temp"workfile-08.xml > "$xml_temp"mappedfile-08.xml};
@@ -102,6 +108,8 @@ if ( -e "$xml_temp/workfile-08.xml") {
       print STDERR "Reading XML Part 7\n";
       qx{"$path/imdbtask_1.pl" "$xml_temp"workfile-07.xml > "$xml_temp"mappedfile-07.xml};
 }}
+
+wait;
 
 if ( -e "$xml_temp/workfile-10.xml") {
     print STDERR "Reading XML Part 9 & Part 10 Together for faster ImdB Download\n";
@@ -112,6 +120,8 @@ if ( -e "$xml_temp/workfile-10.xml") {
       qx{"$path/imdbtask_1.pl" "$xml_temp"workfile-09.xml > "$xml_temp"mappedfile-09.xml};
 }}
 
+wait;
+
 if ( -e "$xml_temp/workfile-12.xml") {
     print STDERR "Reading XML Part 11 & Part 12 Together for faster ImdB Download\n";
     qx{"$path/imdbtask_1.pl" "$xml_temp"workfile-11.xml > "$xml_temp"mappedfile-11.xml & "$path/imdbtask_2.pl" "$xml_temp"workfile-12.xml > "$xml_temp"mappedfile-12.xml};
@@ -121,6 +131,7 @@ if ( -e "$xml_temp/workfile-12.xml") {
       qx{"$path/imdbtask_1.pl" "$xml_temp"workfile-11.xml > "$xml_temp"mappedfile-11.xml};
 }}
 
+wait;
 
 print STDERR "Merging Splitted XML Files together\n";
 qx{xml_merge -o $xmlout "$xml_temp"mappedfile-00.xml};
