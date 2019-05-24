@@ -60,6 +60,9 @@ if ( !-d $xml_temp ) {
     mkdir $xml_temp or die "Failed to create path: $xml_temp";
 }
 
+my $thread ="";
+$thread = qx{ps ax};
+
 print STDERR "Splitting XML in 13MB Files\n";
 qx{cp "$xmlfile" "$xml_temp/workfile"};
 qx{xml_split -s 13000000 "$xml_temp/workfile"};
@@ -90,6 +93,65 @@ if ( -e "$xml_temp/workfile-04.xml")
                             } 
 
 wait;
+if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
 
 if ( -e "$xml_temp/workfile-08.xml")
 {
@@ -113,6 +175,65 @@ if ( -e "$xml_temp/workfile-08.xml")
                             } 
 
 wait;
+if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
 
 if ( -e "$xml_temp/workfile-12.xml")
 {
@@ -136,6 +257,65 @@ if ( -e "$xml_temp/workfile-12.xml")
                             } 
 
 wait;
+if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
 
 if ( -e "$xml_temp/workfile-16.xml")
 {
@@ -159,6 +339,65 @@ if ( -e "$xml_temp/workfile-16.xml")
                             } 
 
 wait;
+if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
 
 if ( -e "$xml_temp/workfile-20.xml")
 {
@@ -182,6 +421,65 @@ if ( -e "$xml_temp/workfile-20.xml")
                             } 
 
 wait;
+if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
 
 if ( -e "$xml_temp/workfile-24.xml")
 {
@@ -205,6 +503,65 @@ if ( -e "$xml_temp/workfile-24.xml")
                             } 
 
 wait;
+if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
 
 if ( -e "$xml_temp/workfile-28.xml")
 {
@@ -228,6 +585,65 @@ if ( -e "$xml_temp/workfile-28.xml")
                             } 
 
 wait;
+if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
 
 if ( -e "$xml_temp/workfile-32.xml")
 {
@@ -251,11 +667,73 @@ if ( -e "$xml_temp/workfile-32.xml")
                             } 
 
 wait;
+if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax}; 
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
+    $thread = qx{ps ax};
+    if ($thread=~ m/imdbtask/) 
+{
+    print STDERR "Waiting for Threads to finish\n";
+    qx{sleep 180};
+    }
 
 print STDERR "Merging Splitted XML Files together\n";
 qx{xml_merge -o $xmlout "$xml_temp"mappedfile-00.xml};
 
+wait;
+
 print STDERR "Deleting Workfiles\n";
 qx{rm -rf "$xml_temp"};
 1;
+
 
