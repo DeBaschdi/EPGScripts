@@ -539,6 +539,29 @@ my %REPLACE=(
  "Verschiedenes" => $NONE ,
  "Variety Show" => $VARIETY ,
  
+ "Geschichtsdoku" => $DOCUMENTARY ,
+ "Krimidrama" => $THRILLER ,
+ "Polizeiserie" => $THRILLER ,
+ "Wetterbericht" => $WEATHER ,
+ "Nachrichtenmagazin" => $NEWS ,
+ "Animationsserie" => $CARTOON ,
+ "Polittalk" => $SOCIAL ,
+ "Quiz" => $GAME ,
+ "Quizshow" => $GAME ,
+ "Börsenbericht" => $ECONOMIC ,
+ "Boulevardmagazin" => $NEWS ,
+ "Telenovela" => $ROMANCE ,
+ "Daily Soap" => $SOAP ,
+ "Realitysoap" => $SOAP ,
+ "Reportagemagazin" => $MAGAZINE ,
+ "Sci-Fi-Parodie" => $SF ,
+ "Sci-Fi-Spektakel" => $SF ,
+ "Buddy-Actionkomödie" => $COMEDY ,
+ "Starmagazin" => $VIP ,
+ "Trödelshow" => $SHOW ,
+
+ 
+
 
  ) ; 
 
