@@ -3,7 +3,7 @@
 ##########################################
 ## Horizon +tv.de +tvtoday +Magentatv   ##
 ## Mapper                               ##
-## Revision 8                           ##
+## Revision 9                           ##
 ## DeBaschdi                            ##
 ## takealug.de                          ##
 ##########################################
@@ -377,8 +377,10 @@ my %REPLACE=(
  "Motorradsport"  => $SPORT_MOTOR ,      
  "Sport/Motorsport"  => $SPORT_MOTOR ,
  "Formel 1"  => $SPORT_MOTOR ,
+ "Rallye"  => $SPORT_MOTOR ,
 
  "Wassersport"  => $SPORT_WATER , 
+ "Kanu"  => $SPORT_WATER ,
  "Sport/Wassersport"  => $SPORT_WATER ,
  "Schwimmen"  => $SPORT_WATER ,
  "Wintersport"  => $Winter_Sports ,
@@ -389,6 +391,7 @@ my %REPLACE=(
  "Nordische Kombination" => $Winter_Sports ,
  "Reitsport"    => $EQU ,  
  "Sport/Reiten"    => $EQU ,
+ "Pferdesport"    => $EQU ,
  "Kampfsport" => $MARTIAL ,
  "enGenWrestling" => $MARTIAL ,
  "deGenWrestling" => $MARTIAL ,
