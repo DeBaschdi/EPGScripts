@@ -1,4 +1,4 @@
-   #!/usr/bin/perl -w
+#!/usr/bin/perl -w
 
 # NEW CHANNEL ID MAPPER
 # CONVERT CHANNEL NAMES INTO RYTEC IDs
