@@ -237,6 +237,7 @@ my %REPLACE=(
     "Classica (Sky)"    => "Classica.eu",
     "Jukebox (Sky)"    => "Jukebox.de",
     "Junior (Sky)"    => "Junior.de",
+    "Penthouse"  => "Penthouse.ero",
     "Sky Cinema"    => "SkyCinema.de",
     "Sky Cinema +1"    => "SkyCinemaPlus1.de",
     "Sky Cinema +24"    => "SkyCinemaPlus24.de",
