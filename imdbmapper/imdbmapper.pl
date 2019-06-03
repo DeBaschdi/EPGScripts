@@ -13,9 +13,9 @@ binmode (STDERR,"encoding(utf8)");
 
 #####################################
 ## ImdbMapper                      ##
-## Revision 7 20190514             ##
+## Revision 7 20190603             ##
 ## takealug.de                     ##
-## https://github.com/sunsettrack4 ##
+## https://github.com/DeBaschdi    ##
 #####################################
 
 #Path to php helper-scripts i.E Path to "age.php"

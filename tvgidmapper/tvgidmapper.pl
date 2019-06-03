@@ -2,10 +2,10 @@
 
 ###########################################
 # CONVERT any TVGidś NAMES INTO RYTEC IDs #
-#                                         #
+# Revision 1                              #
 # takealug.de                             #
 # github.com/DeBaschdi                    #
-# github.com/sunsettrack4                 #
+#                                         #
 ###########################################
 
 my %REPLACE=(
