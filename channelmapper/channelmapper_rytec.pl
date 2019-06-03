@@ -4,7 +4,7 @@
 # CONVERT CHANNEL NAMES INTO RYTEC IDs
 
 ## takealug.de
-## github.com/sunsettrack4
+## github.com/Debaschdi
 
 my %REPLACE=(
 

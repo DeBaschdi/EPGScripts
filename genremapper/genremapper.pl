@@ -4,7 +4,7 @@
 ## Horizon +tv.de +tvtoday +Magentatv   ##
 ## Mapper                               ##
 ## Revision 9                           ##
-## DeBaschdi                            ##
+## github.com/DeBaschdi                 ##
 ## takealug.de                          ##
 ##########################################
 

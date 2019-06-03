@@ -1,8 +1,8 @@
 #!/usr/bin/perl -w 
 ## Ratingmapper ##
-## Revision 3 20190228 ##
+## Revision 3 20190603 ##
 ## takealug.de
-## github.com/sunsettrack4 ##
+## github.com/DeBaschdi ##
 
 use strict;
 use warnings;
