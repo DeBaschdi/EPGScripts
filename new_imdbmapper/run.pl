@@ -69,7 +69,7 @@ if ( !-d $xml_temp ) {
 
 #Check Input Filesize
 my $size = -s $xmlfile;
-if (($size / 30000000) > 3) {
+if (($size / 300000000) > 3) {
   die color("red"), "Max Supportet Filesize is 300MB, please use smaler Filesizes\n " , color("reset") ;
 }
 
