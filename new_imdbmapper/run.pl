@@ -41,6 +41,11 @@ qx{sed -i -e 13c'my \$path= "'$path'" ;' $path/imdbtask.pl} ;
 qx{cp "$path/imdbtask.pl" "$path/imdbtask_1.pl" && cp "$path/imdbtask.pl" "$path/imdbtask_2.pl" && cp "$path/imdbtask.pl" "$path/imdbtask_3.pl" && cp "$path/imdbtask.pl" "$path/imdbtask_4.pl"};
 qx{chmod 0777 -R $path/*} ;
 
+#Modify Tempfiles in taskfiles
+qx{sed -i -e 383c'my \$tempfile="/tmp/xmltv.xml_temp2";' $path/imdbtask_2.pl} ;
+qx{sed -i -e 383c'my \$tempfile="/tmp/xmltv.xml_temp3";' $path/imdbtask_3.pl} ;
+qx{sed -i -e 383c'my \$tempfile="/tmp/xmltv.xml_temp4";' $path/imdbtask_4.pl} ;
+
 #Delete all files older $cachetime
 print STDERR "Deleting all Cached Files older then $cachetime Days\n";
 
