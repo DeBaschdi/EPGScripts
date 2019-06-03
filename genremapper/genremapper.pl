@@ -562,8 +562,34 @@ my %REPLACE=(
  "Buddy-Actionkomödie" => $COMEDY ,
  "Starmagazin" => $VIP ,
  "Trödelshow" => $SHOW ,
-
- 
+ "Beziehungsklamotte" => $SOAP ,
+ "Charakterdrama" => $MOVIE ,
+ "Comedyserie" => $COMEDY ,
+ "Comedyshow" => $COMEDY ,
+ "Episodenklamauk" => $COMEDY ,
+ "Familienserie" => 
+ "Gaunerkomödie" => $COMEDY ,
+ "Gottesdienst" => $RELIGION ,
+ "Heimatkrimi" => $THRILLER ,
+ "Heimattragikomödie" => $COMEDY ,
+ "Kinderserie" => $KIDS ,
+ "Korrespondentenberichte" => $DEBATE ,
+ "Kriminaldrama" => $THRILLER ,
+ "Kulturmagazin" => $CULTURE ,
+ "Lotterieshow" => $SHOW ,
+ "Märchen" => $KIDS ,
+ "Märchenspaß"  => $KIDS ,
+ "Naturdokureihe" => $DOCUMENTARY ,
+ "Politmagazin" => $MAGAZINE ,
+ "Provinzkomödie" => $COMEDY ,
+ "Sportmagazin" => $SPORT_MAGAZINE ,
+ "Tierreportage" => $NATURE ,
+ "Wirtschaftsmagazin" => $ECONOMIC ,
+ "Wissens-Quizshow" => $GAME ,
+ "Wissenschaftsmagazin" => $SCIENCE ,
+ "Wissensmagazin" => $SCIENCE ,
+ "Wissensquiz" => $GAME ,
+ "Zoogeschichten" => $NATURE,
 
 
  ) ; 
