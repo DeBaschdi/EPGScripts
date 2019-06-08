@@ -197,14 +197,14 @@ foreach my $program(@program) {
   my $imdbRATING ="";
   if ($categoryFILTER eq 'used')
      {
-     $imdbRATING = qx{php "$path/rating.php"   "$SearchImdbForTitle;"};
+     $imdbRATING = qx{php "$path/rating.php"   '"$SearchImdbForTitle"'};
      } else {
      $imdbRATING = 'nomatch' }
 
   my $imdbAGE ="";
   if ($categoryFILTER eq 'used')
      {
-     $imdbAGE         = qx{php "$path/age.php"      "$SearchImdbForTitle;"};
+     $imdbAGE         = qx{php "$path/age.php"      '"$SearchImdbForTitle"'};
      } else {
      $imdbAGE = 'nomatch' }
 
@@ -212,28 +212,28 @@ foreach my $program(@program) {
   my $imdbPOSTER ="";
   if ($categoryFILTER eq 'used')
      {
-     $imdbPOSTER         = qx{php "$path/poster.php"      "$SearchImdbForTitle;"};
+     $imdbPOSTER         = qx{php "$path/poster.php"      '"$SearchImdbForTitle"'};
      } else {
      $imdbPOSTER = 'nomatch' }
 
   my $imdbCOUNTRY ="";
   if ($categoryFILTER eq 'used')
      {
-     $imdbCOUNTRY         = qx{php "$path/country.php"      "$SearchImdbForTitle;"};
+     $imdbCOUNTRY         = qx{php "$path/country.php"      '"$SearchImdbForTitle"'};
      } else {
      $imdbCOUNTRY = 'nomatch' }
 
    my $imdbYEAR ="";
    if ($categoryFILTER eq 'used')
      {
-     $imdbYEAR         = qx{php "$path/year.php"      "$SearchImdbForTitle;"};
+     $imdbYEAR         = qx{php "$path/year.php"      '"$SearchImdbForTitle"'};
      } else {
      $imdbYEAR = 'nomatch' }
 
    my $imdbURL  ="";
    if ($categoryFILTER eq 'used')
      {
-     $imdbURL          = qx{php "$path/url.php"      "$SearchImdbForTitle;"};
+     $imdbURL          = qx{php "$path/url.php"      '"$SearchImdbForTitle"'};
      } else {
      $imdbURL  = 'nomatch' }
 
