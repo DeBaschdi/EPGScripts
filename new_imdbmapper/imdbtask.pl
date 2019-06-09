@@ -374,7 +374,7 @@ else {print STDERR color("red"),  "$categoryFILTER $imdbMatch", color("reset"); 
 
 }
 
-print STDERR "IMDB Search in Pass 1 complete\n";
+print STDERR "IMDB Search for $xmlfile is complete\n";
 
 
 

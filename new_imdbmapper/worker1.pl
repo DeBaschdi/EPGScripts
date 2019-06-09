@@ -37,7 +37,7 @@ if ( -e "$xml_temp/workfile-04.xml")
 sub wait_for_thread { 
     my $thread = qx{ps ax};
     if ($thread=~ m/imdbtask_1/ || $thread=~ m/imdbtask_2/ || $thread=~ m/imdbtask_3/ || $thread=~ m/imdbtask_4/)  { 
-        sleep(2);
+        sleep(4);
         wait_for_thread();
     }
 }
