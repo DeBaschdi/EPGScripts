@@ -120,7 +120,7 @@ qx{sed -i 's/workfile/mappedfile/g' "$xml_temp"mappedfile-00.xml};
 
 system "$path/status.sh setup_scroll_area";
 sleep(1);
-system "time $path/prozes.pl & perl $path/worker1.pl & perl $path/worker2.pl";
+system "perl $path/prozes.pl & perl $path/worker1.pl & perl $path/worker2.pl";
 
 sub wait_for_worker { 
     my $thread = qx{ps ax};
