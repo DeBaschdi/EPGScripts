@@ -23,3 +23,7 @@ usage : tvgidmapper.pl  old.m3u > new.m3u
 • EPGScripts/new_imdbmapper/run.pl works like normal "Imdbmapper", but start 4 Tasks for faster IMDB Download.
 usage : run.pl old.xml new.xml
 
+
+Requiments:
+You need to install xml::dom via cpan,
+php-curl is requied by imdbmapper.
