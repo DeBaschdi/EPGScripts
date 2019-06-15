@@ -347,6 +347,9 @@ my $POST = '">' ;
 my $PREID  = 'channel id="' ;
 my $POSTID = '">' ;
 
+my $PREXMLTV  = 'xmltv_id="' ;
+my $POSTXMLTV = '">' ;
+
 sub myfilter {
   my ($a) = @_;
   if ( exists $REPLACE{$a} ) {     
@@ -361,5 +364,6 @@ while (<>) {
     my $line = $_ ;
         $line =~ s/($PRE)(.*)($POST)/"$1".myfilter("$2")."$3"/ge ;
         $line =~ s/($PREID)(.*)($POSTID)/"$1".myfilter("$2")."$3"/ge ;
+        $line =~ s/($PREXMLTV)(.*)($POSTXMLTV)/"$1".myfilter("$2")."$3"/ge ;
     print $line ;
 }
