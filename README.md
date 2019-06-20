@@ -20,7 +20,7 @@ usage : ratingmapper.pl old.xml > new.xml
 • EPGScripts/tvgidmapper/tvgidmapper.pl perl script converts any tvgidś in an IPTV.m3u List file to comply with the Provided Channelidś in EPG.xml
 usage : tvgidmapper.pl  old.m3u > new.m3u
 
-• EPGScripts/new_imdbmapper/run.pl works like normal "Imdbmapper", but start 4 Tasks for faster IMDB Download.
+• EPGScripts/new_imdbmapper/run.pl works like normal "Imdbmapper", but start 8 Tasks for faster IMDB Download.
 usage : run.pl old.xml new.xml
 
 
