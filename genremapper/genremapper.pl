@@ -8,6 +8,9 @@
 ## takealug.de                          ##
 ##########################################
 
+#Output Datei für Fehlermeldungen
+my $genre_error = "genre_error.txt";
+
 ## Hier werden Die EIT NORM Genre Aufgeführt und definiert##
 my $MOVIE             =    "Movie / Drama";
 my $THRILLER          =    "Detective / Thriller";
@@ -596,6 +599,7 @@ my %REPLACE=(
 
 my $PRE  = '<category lang=\"de\">' ;
 my $POST = '</category>'  ;
+open (FILE, ">>$genre_error") || "Error opening File $\n";
 
 sub myfilter {
   my ($a) = @_;
@@ -603,6 +607,7 @@ sub myfilter {
       return $REPLACE{$a} ;
   } else {
       print STDERR "Warning: Unmanaged category: '$a'\n" ;
+      print FILE "Warning: Unmanaged category: '$a'\n" ;
       return $a ;
   }
 }
@@ -612,3 +617,4 @@ while (<>) {
     $line =~ s/($PRE)(.*)($POST)/"$1".myfilter("$2")."$3"/ge ;
     print $line;
 }  
+close(FILE);
